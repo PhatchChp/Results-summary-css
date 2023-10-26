@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  max-width: 50%;
+  max-width: 700px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -29,9 +29,7 @@ body {
 
 /* Box Left */
 .box-left {
-  background: linear-gradient(
-    hsl(252, 100%, 67%),
-    hsl(234, 85%, 45%));
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(234, 85%, 45%));
   border-radius: 30px;
   text-align: center;
   z-index: 1;
@@ -44,18 +42,13 @@ body {
 
 /* Circle */
 .circle {
-  background: linear-gradient(
-    hsla(256, 72%, 46%, 1),
-    hsl(234, 85%, 45%, 0)
-  );
-  width: 200px;
-  height: 200px;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(234, 85%, 45%, 0));
+  max-width: 180px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   margin: auto;
   margin-top: 30px;
-  text-align: center;
-
+  height: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,7 +67,10 @@ body {
 /* end left */
 .in-box-left {
   color: rgb(183, 183, 183);
-  margin: 10%;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .in-box-left h1 {
@@ -97,13 +93,14 @@ body {
 
 .summary {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .box-column {
   background-color: blanchedalmond;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 10%;
+  padding: 13px;
+  border-radius: 10px;
+  margin-top: 17px;
   font-weight: 800;
 }
 
@@ -126,16 +123,16 @@ body {
 button {
   color: white;
   border: 0px;
-  border-radius: 20px;
+  border-radius: 30px;
   width: 100%;
-  padding: 15px;
-  margin: 30px 0px;
-  font-size: large;
+  padding: 17px;
+  margin: 25px 0px;
+  font-size: medium;
   background-color: hsl(224, 30%, 27%);
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background: linear-gradient(
     to bottom,
     hsl(252, 100%, 67%),
@@ -143,221 +140,17 @@ button:hover{
   );
 }
 
-/********** Desktop 1440px *********/
-@media only screen and (max-width: 1440px) {
+/********** Mobile 535px - 375px *********/
+
+@media only screen and (max-width: 535px) {
   .container {
-    max-width: 50%;
+    max-width: 700px;
     margin: auto;
-    /* margin-top: 15%; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Box Left */
-  .box-left {
-    background: linear-gradient(
-      to bottom,
-      hsl(252, 100%, 67%),
-      hsl(234, 85%, 45%)
-    );
-    border-radius: 30px;
-    text-align: center;
-    z-index: 1;
-  }
-
-  .box-left h2 {
-    color: rgb(191, 191, 191);
-    margin-top: 30px;
-  }
-
-  /* Circle */
-  .circle {
-    background: linear-gradient(
-        hsla(256, 72%, 46%, 1),
-        hsl(234, 85%, 45%, 0)
-    );
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    margin: auto;
-    margin-top: 30px;
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .in-circle h1 {
-    color: white;
-    font-size: 75px;
-  }
-  .in-circle p {
-    color: #887cff;
-    font-size: large;
-    margin-top: -10px;
-  }
-
-  /* end left */
-  .in-box-left {
-    color: rgb(183, 183, 183);
-    margin: 10%;
-  }
-
-  .in-box-left h1 {
-    color: white;
-    margin-bottom: 10px;
-  }
-
-  /* Box Right */
-  .box-right {
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 0px 40px 40px 0px;
-    margin-left: -10px;
-  }
-
-  .in-box-right {
-    padding-left: 40px;
-    padding-right: 30px;
-  }
-
-  .summary {
-    margin-top: 30px;
-  }
-
-  .box-column {
-    background-color: blanchedalmond;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10%;
-    font-weight: 800;
-  }
-
-  .box-row {
-    display: grid;
-    grid-template-columns: 30px 1fr 30px auto;
-    align-items: center;
-    justify-content: space-between;
-    font-size: large;
-  }
-
-  .row-left {
-    display: flex;
-  }
-
-  .row-left-text {
-    margin-left: 5px;
-  }
-
-  button {
-    background-color: hsl(224, 30%, 27%);
-    color: white;
-    border: 0px;
-    border-radius: 20px;
-    width: 100%;
-    padding: 15px;
-    margin: 30px 0px;
-    font-size: large;
-  }
-}
-
-/********** Tablet 768px *********/
-@media only screen and (max-width: 1440px) {
-  .container {
-    max-width: 80%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/********** Tablet 425px *********/
-@media only screen and (max-width: 425px) {
-    .container {
-        max-width: 100%;
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-    
-      /* Box Left */
-      .box-left {
-        border-radius: 0px 0px 40px 40px;
-      }
-    
-      .box-left h2 {
-        color: rgb(191, 191, 191);
-        margin-top: 30px;
-      }
-    
-      /* Circle */
-      .circle {
-        width: 260px;
-        height: 260px;
-      }
-    
-      .in-circle h1 {
-        color: white;
-      }
-      
-      .in-circle p {
-        color: #887cff;
-        font-size: medium;
-        margin-top: -5px;
-      }
-    
-      .box-column {
-        background-color: blanchedalmond;
-        padding: 20px;
-        border-radius: 5px;
-        margin-top: 6%;
-        font-weight: 800;
-      }
-  }
-
-/********** Mobile 375px *********/
-
-@media only screen and (max-width: 375px) {
-  .container {
-    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr;
   }
 
-  /* Box Left */
   .box-left {
     border-radius: 0px 0px 40px 40px;
   }
-
-  .box-left h2 {
-    color: rgb(191, 191, 191);
-    margin-top: 30px;
-  }
-
-  /* Circle */
-  .circle {
-    width: 200px;
-    height: 200px;
-    margin-top: 20px;
-  }
-
-  .in-circle h1 {
-    color: white;
-    font-size: 55px;
-  }
-  
-  .in-circle p {
-    color: #887cff;
-    font-size: medium;
-    margin-top: -5px;
-  }
-
-  .box-column {
-    background-color: blanchedalmond;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 6%;
-    font-weight: 800;
-  }
-
 }
